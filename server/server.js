@@ -2,9 +2,6 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-// Specifies our port
-const PORT = 3000;
-
 // Object that contains our create user & verify user routes
 const apiRouter = require('./routes/api.js');
 
@@ -41,7 +38,7 @@ app.use((err, req, res, next) => {
 });
 
 // Instructs server to listen on a given port that was already specified
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Server listening on port: ${PORT}.`);
   })
   
