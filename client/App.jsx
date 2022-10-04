@@ -53,7 +53,7 @@ class App extends Component {
 
     // Before registering a new user, check to see if the city is exists within our database
     try {
-      const res = await fetch(`http://api.waqi.info/feed/${city.toLowerCase()}/?token=078fc8c65162a2b764b773def29987ee5f4ca74f`)
+      const res = await fetch(`https://api.waqi.info/feed/${city.toLowerCase()}/?token=078fc8c65162a2b764b773def29987ee5f4ca74f`)
       let parsedRes = await res.json();
 
       if(parsedRes.data === 'Unknown station') {
@@ -155,7 +155,7 @@ class App extends Component {
 
     // Fetch air quality data from API
     try {
-      const res = await fetch(`http://api.waqi.info/feed/${cityToFetch}/?token=078fc8c65162a2b764b773def29987ee5f4ca74f`)
+      const res = await fetch(`https://api.waqi.info/feed/${cityToFetch}/?token=078fc8c65162a2b764b773def29987ee5f4ca74f`)
       const parsedRes = await res.json();
       let currentAirQuality = parsedRes.data.aqi;
 
