@@ -189,7 +189,7 @@ describe('Normal login test', () => {
 
   it('Successfully logs out', () => {
     cy.get('a[href*="/"]').click()
-    cy.url().should('include','/')
+    cy.url().should('not.include','/dashboard')
   })
 
   it('Successfully logs in with recently completed sign-up', () => {

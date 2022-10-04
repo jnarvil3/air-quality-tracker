@@ -22,6 +22,8 @@ const Dashboard = props => {
 
     const { currentAirQuality } = props;
 
+    // Conditionally choose different recommendation text to a user based on AIQ levels
+
     if(currentAirQuality === undefined) {
         currentAirQuality = 'unknown'
         recommendedActionText = ', please select a new city below or wait for yours to be re-added to our database.'
@@ -33,6 +35,11 @@ const Dashboard = props => {
     }
 
     let cityCapitalized = props.capitalizeCity(props.city)
+
+    const logOutuser = () => {
+        props.logOut();
+        return navigate('../');
+    }
 
     return (
         <div>
