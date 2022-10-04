@@ -2,6 +2,8 @@
 
 This is an open-source application meant to help registered users discover the air pollution in their area (or to search for the air pollution in another area) and to determine whether it is more than they can tolerate.
 
+Live demo: https://air-pollution-tracker-jnarvil3.herokuapp.com/
+
 To use your own version of this app, you'll need to create postgresql instance with the following schema:
 
 CREATE TABLE Users (
