@@ -39,7 +39,7 @@ app.use((err, req, res, next) => {
 
 // Instructs server to listen on a given port that was already specified
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server listening on port: ${PORT}.`);
+    console.log(`Server listening on port: ${PORT || process.env.PORT}.`);
   })
   
 module.exports = app;
